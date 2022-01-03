@@ -20,17 +20,18 @@ import javafx.scene.text.Text;
 import javafx.scene.control.Label;
 
 public class GUI {
-	@FXML
 	//must be public to fxml
-	private Button Query, Select, Delete, Insert, Update, Count, Sum, Max, Min, Avg, Exist, NotExist, In, NotIn;
 	@FXML
-	private TextField Query_input, select1, select2, insert1, insert2, insert3, insert4 , delete1, delete2, delete3, update1, update2, update3, update4, update5;
+	public Button Query, Select, Delete, Insert, Update, Count, Sum, Max, Min, Avg, Exist, NotExist, In, NotIn;
 	@FXML
-	private TextField count1, count2, count3, count4, sum1, sum2, max1, max2, min1, min2, avg1, avg2;
-	//in/exist
-	private TextField exist1, exist2, exist3, exist4, exist5, exist6, exist7, exist8, in1, in2, in3, in4, in5, in6, in7;
-    private Label textLabel1, textLabel2, textLabel3, textLabel4, textLabel5, textLabel6;
-	//Text text = new Text();
+	public TextField Query_input, select1, select2, insert1, insert2, insert3, insert4;
+	@FXML
+	public TextField delete1, delete2, delete3, update1, update2, update3, update4, update5;
+	@FXML
+	public TextField count1, count2, count3, count4, sum1, sum2, max1, max2, min1, min2, avg1, avg2;
+	
+	public TextField exist1, exist2, exist3, exist4, exist5, exist6, exist7, exist8, in1, in2, in3, in4, in5, in6, in7;
+    public Label textLabel1, textLabel2, textLabel3, textLabel4, textLabel5, textLabel6;
 
 
 	
@@ -181,7 +182,8 @@ public class GUI {
      
     //for query
 	public void Query_Press(ActionEvent e) throws SQLException{
-		
+		String query = Query_input.getText();
+		query.get(query);
 		query.press();	
 	}
 }

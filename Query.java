@@ -8,12 +8,33 @@ public class Query implements Command{
         query = input;
     }
 
+	public void InExist(String sql){
+		int replace = 0;
+     	String s = "";
+     	ResultSet Select_Result = statement.executeQuery(sql);
+     	while(Select_Result.next()) {
+     		if(replace == 0) {
+     			s += "Student_Number\n";
+     			replace++;
+     		}
+     		s += Select_Result.getString("Student_Number") + "\n";
+     	}
+     	textLabel6.setText(s);
+	}
+	
+
+	public void Calculate(String sql){
+		ResultSet Select_Result = statement.executeQuery(sql);
+     	Select_Result.next();
+     	int number = Select_Result.getInt(1);
+     	String s = Integer.toString(number);
+     	textLabel5.setText(s);
+	}
+
     public void press(){
         Statement statement = connection.createStatement();
 	
 	 try {
-		 String query = Query_input.getText();
-		 System.out.println(query);
      	 String sql = query;
      	 //basic
      	 if(sql.contains("DELETE")) {
@@ -25,117 +46,32 @@ public class Query implements Command{
      	else if(sql.contains("UPDATE")) {
      		statement.executeUpdate(sql);
      	 }
-     	 //complex
-     	 else if(sql.contains("COUNT")) {
-
-     		System.out.println("count");
-     		ResultSet Select_Result = statement.executeQuery(sql);
-     		Select_Result.next();
-     		int number = Select_Result.getInt(1);
-     		String s=Integer.toString(number);
-     		textLabel5.setText(s);
-     	 }
-     	 else if(sql.contains("SUM")) {
-     		ResultSet Select_Result = statement.executeQuery(sql);
-     		Select_Result.next();
-     		int number = Select_Result.getInt(1);
-     		String s=Integer.toString(number);
-     		textLabel5.setText(s);
-
-     	 }
-     	 else if(sql.contains("AVG")) {
-     		
-     		ResultSet Select_Result = statement.executeQuery(sql);
-     		Select_Result.next();
-     		int number = Select_Result.getInt(1);
-     		String s=Integer.toString(number);
-     		textLabel5.setText(s);
-     	 }
-     	 else if(sql.contains("MAX")) {
-     		ResultSet Select_Result = statement.executeQuery(sql);
-     		Select_Result.next();
-     		int number = Select_Result.getInt(1);
-     		String s=Integer.toString(number);
-     		textLabel5.setText(s);
-     	 }
+     	 
+     	else if(sql.contains("COUNT")) {
+     		Calculate(sql);
+     	}
+     	else if(sql.contains("SUM")) {
+     		Calculate(sql);
+     	}
+     	else if(sql.contains("AVG")) {
+     		Calculate(sql);
+     	}
+     	else if(sql.contains("MAX")) {
+     		Calculate(sql);
+     	}
      	else if(sql.contains("MIN")) {
-     		ResultSet Select_Result = statement.executeQuery(sql);
-     		Select_Result.next();
-     		int number = Select_Result.getInt(1);
-     		String s=Integer.toString(number);
-     		textLabel5.setText(s);
+     		Calculate(sql);
      	}
      	else if(sql.contains("IN")) {
-     		int replace = 0;
-     		String s = "";
-     		ResultSet Select_Result = statement.executeQuery(sql);
-     		while(Select_Result.next()) {
-     			if(replace == 0) {
-     				s += "Student_Number\n";
-     				replace++;
-     			}
-     			s += Select_Result.getString("Student_Number") + "\n";
-     		}
-     		textLabel6.setText(s);
+     		InExist(sql);
      	}
 
      	else if(sql.contains("EXIST")) {
-     		int replace = 0;
-     		String s = "";
-     		ResultSet Select_Result = statement.executeQuery(sql);
-     		while(Select_Result.next()) {
-     			if(replace == 0) {
-     				s += "Student_Number\n";
-     				replace++;
-     			}
-     			s += Select_Result.getString("Student_Number") + "\n";
-     		}
-     		textLabel6.setText(s);
+     		InExist(sql);
      	}
 
-     	else if(sql.contains("HAVING")) {
-     		int replace = 0;
-     		String s = "";
-     		ResultSet Select_Result = statement.executeQuery(sql);
-     		while(Select_Result.next()) {
-     			if(replace == 0) {
-     				s += "Student_Number\n";
-     				replace++;
-     			}
-     			s += Select_Result.getString("Student_Number") + "\n";
-     		}
-     		textLabel6.setText(s);
-     	}
-
-		else if(sql.contains("BETWEEN")) {
-     		int replace = 0;
-     		String s = "";
-     		ResultSet Select_Result = statement.executeQuery(sql);
-     		while(Select_Result.next()) {
-     			if(replace == 0) {
-     				s += "Student_Number\n";
-     				replace++;
-     			}
-     			s += Select_Result.getString("Student_Number") + "\n";
-     		}
-     		textLabel6.setText(s);
-     	}
-		
-		else if(sql.contains("ALIASES")) {
-     		int replace = 0;
-     		String s = "";
-     		ResultSet Select_Result = statement.executeQuery(sql);
-     		while(Select_Result.next()) {
-     			if(replace == 0) {
-     				s += "Student_Number\n";
-     				replace++;
-     			}
-     			s += Select_Result.getString("Student_Number") + "\n";
-     		}
-     		textLabel6.setText(s);
-     	}
-
-     	 else if(sql.substring(0,1).equals("S")) {
+		//Select Command
+     	else if(sql.substring(0,1).equals("S")) {
      		 System.out.println("Select");
      		int head1 = 0, head2 = 0, head3 = 0, head4 = 0;
      		 table = "";
@@ -396,7 +332,7 @@ public class Query implements Command{
          			table3 += "\n";
 
      			}
-     		}//
+     		}
      	 }
      	 else {
      		 System.out.println("other");
