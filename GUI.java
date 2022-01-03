@@ -23,15 +23,31 @@ public class GUI {
 	//must be public to fxml
 	@FXML
 	public Button Query, Select, Delete, Insert, Update, Count, Sum, Max, Min, Avg, Exist, NotExist, In, NotIn;
-	@FXML
-	public TextField Query_input, select1, select2, insert1, insert2, insert3, insert4;
-	@FXML
-	public TextField delete1, delete2, delete3, update1, update2, update3, update4, update5;
-	@FXML
-	public TextField count1, count2, count3, count4, sum1, sum2, max1, max2, min1, min2, avg1, avg2;
+
+	public TextField Query_input, select_column_name, select_table_name;
+
+	public TextField insert_table_name, insert_value1, insert_value2, insert_value3;
+
+	public TextField delete_table_name, delete_condition_left, delete_condition_right;
+
+	public TextField update_table_name, update_column, update_value, update_condition_left, update_condition_right;
+
+	public TextField count_column_name, count_table_name, count_condition_left, count_condition_right;
 	
-	public TextField exist1, exist2, exist3, exist4, exist5, exist6, exist7, exist8, in1, in2, in3, in4, in5, in6, in7;
+	public TextField sum_column_name, sum_table_name;
+
+	public TextField max_column_name, max_table_name;
+
+	public TextField min_column_name, min_table_name;
+
+	public TextField avg_column_name, avg_table_name;
+	
+	public TextField exist1, exist2, exist3, exist4, exist5, exist6, exist7, exist8;
+	
+	public TextField in1, in2, in3, in4, in5, in6, in7;
+
     public Label textLabel1, textLabel2, textLabel3, textLabel4, textLabel5, textLabel6;
+
 
 
 	
