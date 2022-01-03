@@ -4,12 +4,14 @@ public class Select implements Command{
 	private String query1, query2;
 	private String table = "", table2 = "" ,table3 = "", table4 ="";
 
+	//get function can access user input
 	public void get(String input1, String input2){
 		query1 = input1;
 		query2 = input2;
 
 	}
 
+	//press function can update Database with user input
     public void press(){
 		
 		

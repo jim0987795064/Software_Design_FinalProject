@@ -3,7 +3,7 @@ public class Query implements Command{
     private string query = "";
 	private String table = "", table2 = "" ,table3 = "", table4 ="";
 
-
+	//get function can access user input
     public void get(String input){
         query = input;
     }
@@ -22,7 +22,7 @@ public class Query implements Command{
      	textLabel6.setText(s);
 	}
 	
-
+	
 	public void Calculate(String sql){
 		ResultSet Select_Result = statement.executeQuery(sql);
      	Select_Result.next();
@@ -31,6 +31,7 @@ public class Query implements Command{
      	textLabel5.setText(s);
 	}
 
+	//press function can update Database with user input
     public void press(){
         Statement statement = connection.createStatement();
 	

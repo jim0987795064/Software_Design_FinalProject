@@ -2,6 +2,7 @@ public class In implements Command{
 
 	private String query1, query2, query3, query4, query5, query6, query7;
 
+	//get function can access user input
 	public void get(String input1, String input2, String input3, String input4, String input5, String input6, String input7){
 		query1 = input1;
 		query2 = input2;
@@ -12,6 +13,7 @@ public class In implements Command{
 		query7 = input7;
 	}
 
+	//press function can update Database with user inputs
     public void press(){
         Statement statement = connection.createStatement();
     	String query ="SELECT "+query1+" FROM "+query2+" WHERE "+query3+" IN (SELECT "+query4+" FROM "+query5+" WHERE "+query6+"='"+query7+"');";

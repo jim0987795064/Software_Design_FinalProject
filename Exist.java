@@ -3,6 +3,7 @@ public class Exist implements Command{
 
 	private String query1, query2, query3, query4, query5, query6, query7, query8;
 
+	//get function can access user input
 	public void get(String input1, String input2, String input3, String input4, String input5, String input6, String input7, String input8){
 		query1 = input1;
 		query2 = input2;
@@ -14,6 +15,7 @@ public class Exist implements Command{
 		query8 = input8;
 	}
 
+	//press function can update Database with user input
     public void press(){
         Statement statement = connection.createStatement();
     	String query ="SELECT "+query1+" FROM "+query2+" WHERE EXISTS (SELECT "+query3+" FROM "+query4+" WHERE "+query5+"."+query6+" = "+query7+"."+query8+");";

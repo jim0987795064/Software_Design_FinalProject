@@ -36,7 +36,7 @@ public class GUI {
 	
 	public TextField sum_column_name, sum_table_name;
 
-	public TextField max_column_name, max_table_name;
+	public TextField max_column_name, max_table_namesss;
 
 	public TextField min_column_name, min_table_name;
 
