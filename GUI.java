@@ -22,16 +22,16 @@ import javafx.scene.control.Label;
 public class GUI {
 	@FXML
 	//must be public to fxml
-	public Button Query, Select, Delete, Insert, Update, Count, Sum, Max, Min, Avg, Exist, NotExist, In, NotIn;
+	private Button Query, Select, Delete, Insert, Update, Count, Sum, Max, Min, Avg, Exist, NotExist, In, NotIn;
 	@FXML
-	public TextField Query_input, select1, select2, insert1, insert2, insert3, insert4 , delete1, delete2, delete3, update1, update2, update3, update4, update5;
+	private TextField Query_input, select1, select2, insert1, insert2, insert3, insert4 , delete1, delete2, delete3, update1, update2, update3, update4, update5;
 	@FXML
-	public TextField count1, count2, count3, count4, sum1, sum2, max1, max2, min1, min2, avg1, avg2;
+	private TextField count1, count2, count3, count4, sum1, sum2, max1, max2, min1, min2, avg1, avg2;
 	//in/exist
-	public TextField exist1, exist2, exist3, exist4, exist5, exist6, exist7, exist8, in1, in2, in3, in4, in5, in6, in7;
-    public Label textLabel1, textLabel2, textLabel3, textLabel4, textLabel5, textLabel6;
+	private TextField exist1, exist2, exist3, exist4, exist5, exist6, exist7, exist8, in1, in2, in3, in4, in5, in6, in7;
+    private Label textLabel1, textLabel2, textLabel3, textLabel4, textLabel5, textLabel6;
 	//Text text = new Text();
-	String table = "", table2 = "" ,table3 = "", table4 ="";
+
 
 	
 	

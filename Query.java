@@ -1,6 +1,9 @@
 public class Query implements Command{
 
-    public string query = "";
+    private string query = "";
+	private String table = "", table2 = "" ,table3 = "", table4 ="";
+
+
     public void get(String input){
         query = input;
     }

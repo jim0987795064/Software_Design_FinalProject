@@ -1,6 +1,6 @@
 public class NonExist implements Command{
 
-	public String query1, query2, query3, query4, query5, query6, query7, query8;
+	private String query1, query2, query3, query4, query5, query6, query7, query8;
 
 	public void get(String input1, String input2, String input3, String input4, String input5, String input6, String input7, String input8){
 		query1 = input1;

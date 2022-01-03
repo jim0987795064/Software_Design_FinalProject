@@ -2,6 +2,7 @@
 public class Select implements Command{
 
 	private String query1, query2;
+	private String table = "", table2 = "" ,table3 = "", table4 ="";
 
 	public void get(String input1, String input2){
 		query1 = input1;
