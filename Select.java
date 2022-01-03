@@ -1,7 +1,13 @@
 
 public class Select implements Command{
 
-	
+	private String query1, query2;
+
+	public void get(String input1, String input2){
+		query1 = input1;
+		query2 = input2;
+
+	}
 
     public void press(){
 		
@@ -14,8 +20,6 @@ public class Select implements Command{
     	table3 = "";
     	table4 = "";
     	Statement statement = connection.createStatement();
-    	String query1 = select1.getText();
-     	String query2 = select2.getText();
      	String query = "SELECT " + query1 + " FROM "+ query2;
      	String sql = query;
      	ResultSet Select_Result = statement.executeQuery(sql);

@@ -1,12 +1,20 @@
 
 public class Update implements Command{
+
+	private String query1, query2, query3, query4, query5;
+
+	public void get(String input1, String input2, String input3, String input4, String input5){
+		query1 = input1;
+		query2 = input2;
+		query3 = input3;
+		query4 = input4;
+		query5 = input5;
+	}
+
+
+
     public void press(){ 
         Statement statement = connection.createStatement();
-   	 	String query1 = update1.getText();
-    	String query2 = update2.getText();
-    	String query3 = update3.getText();
-    	String query4 = update4.getText();
-    	String query5 = update5.getText();
     	String query = "UPDATE " +query1+ " SET " +query2+ "='"+query3+"' WHERE " +query4+" = '"+query5+"';";
     	statement.executeUpdate(query);
     	System.out.println(query);

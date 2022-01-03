@@ -1,5 +1,10 @@
 public class Query implements Command{
 
+    public string query = "";
+    public void get(String input){
+        query = input;
+    }
+
     public void press(){
         Statement statement = connection.createStatement();
 	

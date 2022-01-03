@@ -1,10 +1,15 @@
 public class Avg implements Command{
 
+	private String query1, query2;
+
+	public void get(String input1, String input2){
+		query1 = input1;
+		query2 = input2;
+	}
+
     public void press(){
 
         Statement statement = connection.createStatement();
-    	String query1 = avg1.getText();
-    	String query2 = avg2.getText();
     	String query ="SELECT AVG("+query1+") FROM "+query2+";";
     	ResultSet Select_Result = statement.executeQuery(query);
  		Select_Result.next();

@@ -1,10 +1,15 @@
 public class Max implements Command{
 
+	private String query1, query2;
+
+	public void get(String input1, String input2){
+		query1 = input1;
+		query2 = input2;
+	}
+
     public void press(){
 
         Statement statement = connection.createStatement();
-    	String query1 = max1.getText();
-    	String query2 = max2.getText();
     	String query ="SELECT MAX("+query1+") FROM "+query2+";";
     	ResultSet Select_Result = statement.executeQuery(query);
  		Select_Result.next();
