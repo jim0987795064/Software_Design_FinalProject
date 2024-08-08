@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/e245c4f8-f818-4f1b-bf46-630b7b32064c)![image](https://github.com/user-attachments/assets/45d81a10-e882-4836-86a2-eb0fb600f94c)# Implement database of personnel department in school
+# Implement database of personnel department in school
+
+![image](https://github.com/user-attachments/assets/e245c4f8-f818-4f1b-bf46-630b7b32064c)![image](https://github.com/user-attachments/assets/45d81a10-e882-4836-86a2-eb0fb600f94c)
 
 ## Use Mysql to build a relational database system 
 ![image](https://github.com/user-attachments/assets/bfe6f319-00b6-49bd-b7fe-da7fd1d2677d)
