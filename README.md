@@ -16,7 +16,8 @@ Initially, there were three classes: Main, DatabaseController, and GUI. The SQL 
 
 ## Modified Class Diagram
 After refactoring, the SQL command code was moved out of the GUI class. Subsequently, adding a SQL command only requires creating a new class to implement the Command.
-![image](https://github.com/user-attachments/assets/3ad59b86-a9ea-485b-bb36-7ae12d95c3ff)
+![image](https://github.com/user-attachments/assets/3c48123a-d149-4a29-9a6e-432ef057c473)
+
 
 
 ## Use Strategy Pattern
